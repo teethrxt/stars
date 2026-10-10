@@ -1,1 +1,74 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Starry Sky</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
+</head>
+
+<body>
+<script>
+// Variables
+let canvasWidth = 500;
+let canvasHeight = 500;
+let skyColor = "#10102B";
+let starColor = "#FFFFFF";
+let starSize = 8;
+
+function setup() {
+  createCanvas(canvasWidth, canvasHeight);
+}
+
+function draw() {
+  background(skyColor);
+
+  // Small stars
+  fill(starColor);
+  stroke(starColor);
+  ellipse(50, 60, starSize, starSize);
+
+  fill("#FFD966");
+  stroke("#FFD966");
+  ellipse(150, 120, starSize, starSize);
+
+  fill(starColor);
+  stroke(starColor);
+  ellipse(300, 70, starSize, starSize);
+
+  fill("#FFD966");
+  stroke("#FFD966");
+  ellipse(400, 200, starSize, starSize);
+
+  fill(starColor);
+  stroke(starColor);
+  ellipse(100, 300, starSize, starSize);
+
+  fill("#FFD966");
+  stroke("#FFD966");
+  ellipse(350, 380, starSize, starSize);
+
+  // Square sparkle
+  push();
+  translate(250, 200);
+  rotate(PI / 4);
+  fill("#FFD966");
+  stroke("#FFD966");
+  rect(-5, -5, 10, 10);
+  pop();
+
+  // Shooting star
+  fill("#FFFFFF");
+  stroke("#FFFFFF");
+  line(200, 350, 260, 320);
+
+  // Triangle sparkle
+  fill("#FFFFFF");
+  stroke("#FFFFFF");
+  triangle(420, 350, 410, 370, 430, 370);
+}
+</script>
+</body>
+</html>
+
